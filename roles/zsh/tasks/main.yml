@@ -1,0 +1,10 @@
+- name: Install zsh
+  package: name=zsh state=latest
+  become: true
+
+- name: Switch default shell to zsh
+  user: name={{ lookup('env', 'USER') }} shell=/usr/bin/zsh
+  become: true
+
+- name: Copy minimal zshrc
+  copy: src=zshrc dest={{ lookup('env', 'HOME') }}/.zshrc

@@ -1,0 +1,7 @@
+- name: Set up local terminal environment
+  hosts: local
+  roles:
+    - {role: zsh, tags: ['zsh']}
+    - {role: powerlevel10k, tags: ['powerlevel10k']}
+    - {role: zsh-dircolors-solarized, tags: ['zsh-dircolors-solarized']}
+    - {role: tmux, tags: ['tmux']}

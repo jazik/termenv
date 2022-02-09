@@ -1,0 +1,15 @@
+- name: Install tmux
+  package: name=tmux state=latest
+  become: true
+
+- name: Install Powerline Blue theme
+  get_url:
+    url: https://raw.githubusercontent.com/jimeh/tmux-themepack/master/powerline/block/orange.tmuxtheme
+    dest: ~/.tmux-orange.tmuxtheme
+
+- name: Source theme in .tmux.conf
+  lineinfile:
+    path: "{{ lookup('env', 'HOME') }}/.tmux.conf"
+    create: yes
+    regexp: '.*tmuxtheme.*'
+    line: 'source-file ${HOME}/.tmux-orange.tmuxtheme'

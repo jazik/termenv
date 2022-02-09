@@ -1,0 +1,13 @@
+- name: Install zsh-dircolors-solarized
+  git: repo=https://github.com/joel-porquet/zsh-dircolors-solarized dest=~/.zsh/zsh-dircolors-solarized force=yes recursive=yes
+
+- name: Add config to .zshrc
+  lineinfile:
+    path: "{{ lookup('env', 'HOME') }}/.zshrc"
+    line: 'source ~/.zsh/zsh-dircolors-solarized/zsh-dircolors-solarized.zsh'
+
+- name: Set default config
+  lineinfile:
+    path: "{{ lookup('env', 'HOME') }}/.zsh-dircolors.config"
+    create: yes
+    line: 'dircolors.ansi-universal'

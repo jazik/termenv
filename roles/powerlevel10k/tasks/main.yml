@@ -1,0 +1,15 @@
+- name: Install PowerLevel10k
+  git: repo=https://github.com/romkatv/powerlevel10k.git dest=~/.zsh/powerlevel10k force=yes
+
+- name: Add source to .zshrc
+  lineinfile:
+    path: "{{ lookup('env', 'HOME') }}/.zshrc"
+    line: 'source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme'
+
+- name: Add config to .zshrc
+  lineinfile:
+    path: "{{ lookup('env', 'HOME') }}/.zshrc"
+    line: '[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh'
+
+- name: Copy .p10k.zsh
+  copy: src=p10k.zsh dest={{ lookup('env', 'HOME') }}/.p10k.zsh
