@@ -2,6 +2,7 @@
   hosts: local
   roles:
     - {role: zsh, tags: ['zsh']}
+    - {role: oh-my-zsh, tags: ['oh-my-zsh']}
     - {role: powerlevel10k, tags: ['powerlevel10k']}
     - {role: zsh-dircolors-solarized, tags: ['zsh-dircolors-solarized']}
     - {role: tmux, tags: ['tmux']}
