@@ -1,0 +1,18 @@
+- name: Cloning fzf
+  git: repo=https://github.com/junegunn/fzf.git dest=~/.fzf
+
+- name: Install fzf
+  shell: ~/.fzf/install
+
+- name: Check if .oh-my-zsh exists
+  stat:
+    path: ~/.oh-my-zsh
+  register: stat_oh_my_zsh_result
+
+- name: Enable fzf plugin for oh-my-zsh
+  lineinfile:
+    path: "{{ lookup('env', 'HOME') }}/.zshrc"
+    backrefs: yes
+    regexp: '^plugins=\((.*)fzf(.*)\)'
+    line: 'plugins=(fzf \1 \2)'
+  when: stat_oh_my_zsh_result.stat.exists
