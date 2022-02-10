@@ -2,8 +2,11 @@
 
 Configuration of terminal enviroment with ansible playbook.
 
-The configuration contains very basic setup with `zsh`, `PoverLevel10k`,
-`zsh-dircolors-solarized` and `tmux` with Powerline theme.
+The configuration contains very basic setup with:
+- [`zsh`](https://zsh.sourceforge.io/)
+- [`PoverLevel10k`](https://github.com/romkatv/powerlevel10k)
+- [`zsh-dircolors-solarized`](https://github.com/joel-porquet/zsh-dircolors-solarized)
+- [`tmux`](https://github.com/tmux/tmux) with Powerline theme.
 
 # Prerequisites
 
