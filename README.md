@@ -65,7 +65,7 @@ vagrant [--local=no|yes] [--no-install=yes|no] <command> [fedora|ubuntu]
    vagrant commands such as up, destroy, ssh etc
 
 fedora|ubuntu
-   Linux distro to deploy, in none is selected both are created.
+   Linux distro to deploy, if none is selected both are created
 ```
 
 For example to run playbook for `fedora` from local repo:
