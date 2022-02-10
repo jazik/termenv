@@ -1,6 +1,6 @@
 # termenv
 
-Configuration of terminal enviroment with ansible playbook.
+Configuration of terminal environment with ansible playbook.
 
 The configuration contains very basic setup with:
 - [`zsh`](https://zsh.sourceforge.io/)
