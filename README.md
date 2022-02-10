@@ -42,7 +42,7 @@ ansible-playbook -i hosts termenv.yml
 # Testing playbooks
 
 In order to run local tests install `vagrant` with both `libvirt` and
-`VirtualBox` providers. Check our host system distro guidelines how
+`VirtualBox` providers. Check your host system distro guidelines how
 to install those.
 
 To test the playbook and configuration there is [Vagrantfile](Vagrantfile)
