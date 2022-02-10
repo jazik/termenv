@@ -19,6 +19,7 @@ sudo dnf install git ansible
 ## Ubuntu
 
 ```
+sudo apt-get update
 sudo apt-get install git ansible
 ```
 
