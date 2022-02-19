@@ -64,6 +64,32 @@ ansible-playbook -i hosts termenv.yml --tags tmux
 
 # Testing playbooks
 
+## Docker/Podman/Moby
+
+If you would like to see how the environment looks or you would like
+to experiment with the configuration, there is a [Dockerfile](Dockerfile)
+in the project repo to create the environment quickly:
+
+For environment on Fedora:
+
+```
+docker build -t termenv . --build-arg DISTRO=fedora
+```
+
+Or for Ubuntu:
+
+```
+docker build -t termenv . --build-arg DISTRO=ubuntu
+```
+
+Then run the container:
+
+```
+docker run --rm -it termenv
+````
+
+The playbooks are cloned from Github `main`.
+
 ## With Vagrant
 
 In order to run local tests install `vagrant` with both `libvirt` and
