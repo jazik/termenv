@@ -23,6 +23,9 @@ USER $USERNAME
 ENV USER=$USERNAME
 WORKDIR /home/$USERNAME
 
+ENV TERM xterm-256color
+ENV SHELL /usr/bin/zsh
+
 RUN git clone https://github.com/jazik/termenv.git && \
     cd termenv && \
     ansible-playbook -i hosts termenv.yml
