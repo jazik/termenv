@@ -11,8 +11,6 @@
 
 - name: Enable fzf plugin for oh-my-zsh
   lineinfile:
-    path: "{{ lookup('env', 'HOME') }}/.zshrc"
-    backrefs: yes
-    regexp: '^plugins=\((.*)fzf(.*)\)'
-    line: 'plugins=(fzf \1 \2)'
+    path: "{{ lookup('env', 'HOME') }}/.oh-my-zsh/plugins.lst"
+    line: 'fzf'
   when: stat_oh_my_zsh_result.stat.exists

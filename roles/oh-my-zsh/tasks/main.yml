@@ -3,3 +3,15 @@
 
 - name: Creating new ~/.zshrc
   copy: src=~/.oh-my-zsh/templates/zshrc.zsh-template dest=~/.zshrc
+
+- name: Create plugins list as a file
+  lineinfile:
+    path: "{{ lookup('env', 'HOME') }}/.oh-my-zsh/plugins.lst"
+    create: yes
+    line: 'git'
+
+- name: Enable plugins from file
+  lineinfile:
+    path: "{{ lookup('env', 'HOME') }}/.zshrc"
+    regexp: '^plugins=.*'
+    line: 'plugins=($(<~/.oh-my-zsh/plugins.lst))'
