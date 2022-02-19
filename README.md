@@ -38,6 +38,24 @@ cd termenv
 ansible-playbook -i hosts termenv.yml
 ```
 
+# Customization
+
+All the roles are run by default. If you wish to install only some of
+the roles or skip some roles, use `ansible` `tags`, which are defined
+in [termenv.yml](termenv.yml).
+
+For example to skip `tmux` run:
+
+```
+ansible-playbook -i hosts termenv.yml --skip-tags tmux
+```
+
+Or to install only `tmux` run:
+
+```
+ansible-playbook -i hosts termenv.yml --tags tmux
+```
+
 # Sample screen shots
 
 ![Zsh command line](../media/termenv.png?raw=true)
