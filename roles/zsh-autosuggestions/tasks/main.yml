@@ -1,0 +1,13 @@
+- name: Cloning zsh-autosuggestions
+  git: repo=https://github.com/zsh-users/zsh-autosuggestions dest=~/.oh-my-zsh/plugins/zsh-autosuggestions
+
+- name: Check if .oh-my-zsh exists
+  stat:
+    path: ~/.oh-my-zsh
+  register: stat_oh_my_zsh_result
+
+- name: Enable zsh-autosuggestions plugin for oh-my-zsh
+  lineinfile:
+    path: "{{ lookup('env', 'HOME') }}/.oh-my-zsh/plugins.lst"
+    line: 'zsh-autosuggestions'
+  when: stat_oh_my_zsh_result.stat.exists

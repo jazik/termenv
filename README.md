@@ -7,8 +7,12 @@ The configuration contains very basic setup with:
 - [`oh-my-zsh`](https://ohmyz.sh/)
 - [`PoverLevel10k`](https://github.com/romkatv/powerlevel10k)
 - [`zsh-dircolors-solarized`](https://github.com/joel-porquet/zsh-dircolors-solarized)
+- [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
 - [`tmux`](https://github.com/tmux/tmux) with Powerline theme.
 - [`fzf`](https://ohmyz.sh/) with [`fzf ohmyz plugin`](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fzf)
+
+Inspired also by:
+- [Terminal History Auto Suggestions As You Type With Oh My Zsh](https://www.dev-diaries.com/blog/terminal-history-auto-suggestions-as-you-type/)
 
 # Prerequisites
 
