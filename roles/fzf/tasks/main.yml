@@ -14,3 +14,9 @@
     path: "{{ lookup('env', 'HOME') }}/.oh-my-zsh/plugins.lst"
     line: 'fzf'
   when: stat_oh_my_zsh_result.stat.exists
+
+- name: Set fzf opts
+  lineinfile:
+    path: "{{ lookup('env', 'HOME') }}/.zshrc"
+    regexp: 'export FZF_DEFAULT_OPTS=.*'
+    line: "export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'"
