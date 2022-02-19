@@ -8,6 +8,7 @@ The configuration contains very basic setup with:
 - [`PoverLevel10k`](https://github.com/romkatv/powerlevel10k)
 - [`zsh-dircolors-solarized`](https://github.com/joel-porquet/zsh-dircolors-solarized)
 - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
+- [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting)
 - [`tmux`](https://github.com/tmux/tmux) with Powerline theme.
 - [`fzf`](https://ohmyz.sh/) with [`fzf ohmyz plugin`](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fzf)
 

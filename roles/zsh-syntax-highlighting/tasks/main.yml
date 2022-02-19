@@ -1,0 +1,14 @@
+- name: Cloning zsh-syntax-highlighting
+  git: repo=https://github.com/zsh-users/zsh-syntax-highlighting.git dest=~/.oh-my-zsh/plugins/zsh-syntax-highlighting
+
+- name: Check if .oh-my-zsh exists
+  stat:
+    path: ~/.oh-my-zsh
+  register: stat_oh_my_zsh_result
+
+- name: Enable zsh-syntax-highlighting plugin for oh-my-zsh
+  lineinfile:
+    path: "{{ lookup('env', 'HOME') }}/.oh-my-zsh/plugins.lst"
+    line: 'zsh-syntax-highlighting'
+    insertafter: EOF
+  when: stat_oh_my_zsh_result.stat.exists

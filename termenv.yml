@@ -6,5 +6,6 @@
     - {role: powerlevel10k, tags: ['powerlevel10k']}
     - {role: zsh-dircolors-solarized, tags: ['zsh-dircolors-solarized']}
     - {role: zsh-autosuggestions, tags: ['zsh-autosuggestions']}
+    - {role: zsh-syntax-highlighting, tags: ['zsh-syntax-highlighting']}
     - {role: tmux, tags: ['tmux']}
     - {role: fzf, tags: ['fzf']}
