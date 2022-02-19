@@ -64,6 +64,8 @@ ansible-playbook -i hosts termenv.yml --tags tmux
 
 # Testing playbooks
 
+## With Vagrant
+
 In order to run local tests install `vagrant` with both `libvirt` and
 `VirtualBox` providers. Check your host system distro guidelines how
 to install those.
