@@ -17,6 +17,9 @@ Inspired also by:
 
 # Prerequisites
 
+The ansible script performs package installations. The user under which
+you execute the script needs to be in `sudoers`.
+
 ## Fedora
 
 ```
@@ -35,7 +38,7 @@ sudo apt-get install git ansible
 ```
 git clone https://github.com/jazik/termenv.git
 cd termenv
-ansible-playbook -i hosts termenv.yml
+ansible-playbook -i hosts --ask-become-pass termenv.yml
 ```
 
 # Customization
