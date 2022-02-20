@@ -5,7 +5,7 @@ Configuration of terminal environment with ansible playbook.
 The configuration contains very basic setup with:
 - [`zsh`](https://zsh.sourceforge.io/)
 - [`oh-my-zsh`](https://ohmyz.sh/)
-- [`PoverLevel10k`](https://github.com/romkatv/powerlevel10k)
+- [`PowerLevel10k`](https://github.com/romkatv/powerlevel10k)
 - [`zsh-dircolors-solarized`](https://github.com/joel-porquet/zsh-dircolors-solarized)
 - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
 - [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting)
