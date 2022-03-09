@@ -105,13 +105,13 @@ There are also couple of custom options to run local tests or to have
 envs for manual testing.
 
 ```
-vagrant [--local=no|yes] [--no-install=yes|no] <command> [fedora|ubuntu]
+vagrant [--local=no|yes] [--do-install=yes|no] <command> [fedora|ubuntu]
 
 --local
    Run playbook from Github (no, default) or from local current
    directory (yes)
 
---no-install
+--do-install
    Install dependencies and run playbook (yes, default) or skip
    installation (no) and just start machine for manual testing
 
