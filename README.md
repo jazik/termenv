@@ -99,6 +99,21 @@ In order to run local tests install `vagrant` with both `libvirt` and
 `VirtualBox` providers. Check your host system distro guidelines how
 to install those.
 
+In `fedora` you can run:
+
+```
+sudo dnf install vagrant vagrant-libvirt VirtualBox libvirt
+sudo usermod -a -G libvirt ${USER}
+```
+
+When using `fedora` ensure that `nfs` is enabled in `libvirt` firewall zone:
+
+```
+sudo systemctl --now enable virtnetworkd.service
+sudo firewall-cmd --permanent --zone=libvirt --add-service=nfs
+sudo firewall-cmd --reload
+```
+
 To test the playbook and configuration there is [Vagrantfile](Vagrantfile)
 with two predefined configurations. One for `fedora` and one for `ubuntu`.
 There are also couple of custom options to run local tests or to have
