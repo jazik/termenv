@@ -33,7 +33,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "ubuntu" do |ubuntu|
-    ubuntu.vm.box = "ubuntu/impish64"
+    ubuntu.vm.box = "ubuntu/noble64"
     ubuntu.vm.provider "virtualbox"
     if do_install == "yes"
       ubuntu.vm.provision "shell", inline: <<-SHELL
