@@ -23,7 +23,7 @@ end
 Vagrant.configure("2") do |config|
 
   config.vm.define "fedora" do |fedora|
-    fedora.vm.box = "generic/fedora35"
+    fedora.vm.box = "generic/fedora39"
     fedora.vm.provider "libvirt"
     if do_install == "yes"
       fedora.vm.provision "shell", inline: <<-SHELL
