@@ -23,6 +23,11 @@ require("lazy").setup("plugins", {
   },
 })
 
+-- Use tabs for indentation in Go files
+vim.api.nvim_exec([[
+  autocmd FileType go setlocal tabstop=4 shiftwidth=4 noexpandtab
+]], false)
+
 -- These modules are not loaded by lazy
 require("core.options")
 require("core.keymaps")
