@@ -13,3 +13,8 @@
     create: yes
     regexp: '.*tmuxtheme.*'
     line: 'source-file ${HOME}/.tmux-orange.tmuxtheme'
+
+- name: Set start window index from 1 in .tmux.conf
+  lineinfile:
+    path: "{{ lookup('env', 'HOME') }}/.tmux.conf"
+    line: 'set-option -g base-index 1'
