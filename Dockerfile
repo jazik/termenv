@@ -6,6 +6,7 @@ RUN if [ "$DISTRO" == "fedora" ]; then \
         CMD=dnf; \
     else \
         CMD=apt-get; \
+        add-apt-repository ppa:neovim-ppa/unstable -y; \
         apt-get -y update; \
     fi && \
     $CMD -y install ansible git sudo
