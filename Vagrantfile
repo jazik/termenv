@@ -37,6 +37,7 @@ Vagrant.configure("2") do |config|
     ubuntu.vm.provider "virtualbox"
     if do_install == "yes"
       ubuntu.vm.provision "shell", inline: <<-SHELL
+        sudo add-apt-repository ppa:neovim-ppa/unstable -y
         sudo apt-get -y update
         sudo apt-get -y install git ansible
       SHELL

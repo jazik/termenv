@@ -11,6 +11,8 @@ The configuration contains very basic setup with:
 - [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting)
 - [`tmux`](https://github.com/tmux/tmux) with Powerline theme.
 - [`fzf`](https://github.com/junegunn/fzf) with [`fzf ohmyz plugin`](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fzf)
+- [`neovim`](https://neovim.io/) with couple of handy plugins inspired by
+  [`bcampolo/nvim-starter-kit`](https://github.com/bcampolo/nvim-starter-kit)
 
 Inspired also by:
 - [Terminal History Auto Suggestions As You Type With Oh My Zsh](https://www.dev-diaries.com/blog/terminal-history-auto-suggestions-as-you-type/)
