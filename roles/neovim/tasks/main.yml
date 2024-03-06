@@ -2,6 +2,11 @@
   package: name=neovim state=latest
   become: true
 
+# Needed by telescope plugin for fuzzy greping
+- name: Install ripgrep
+  package: name=ripgrep state=latest
+  become: true
+
 - name: Check if nvim config already exist
   stat:
     path: ~/.config/nvim/
