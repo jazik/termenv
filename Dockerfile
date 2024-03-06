@@ -5,9 +5,12 @@ ARG DISTRO
 RUN if [ "$DISTRO" = "fedora" ]; then \
         CMD=dnf; \
     else \
+        export DEBIAN_FRONTEND=noninteractive; \
+        export TZ=Etc/UTC; \
         CMD=apt-get; \
-        add-apt-repository ppa:neovim-ppa/unstable -y; \
         apt-get -y update; \
+        apt-get -y install software-properties-common; \
+        add-apt-repository ppa:neovim-ppa/unstable -y; \
     fi && \
     $CMD -y install ansible git sudo
 
