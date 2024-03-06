@@ -53,3 +53,7 @@ opt.foldlevel = 20
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()" -- Utilize Treesitter folds
 
+-- Spellcheck
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
+
