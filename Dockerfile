@@ -2,7 +2,7 @@ ARG DISTRO
 FROM $DISTRO
 
 ARG DISTRO
-RUN if [ "$DISTRO" == "fedora" ]; then \
+RUN if [ "$DISTRO" = "fedora" ]; then \
         CMD=dnf; \
     else \
         CMD=apt-get; \
