@@ -60,6 +60,15 @@ keymap.set('n', '<leader>fo', require('telescope.builtin').lsp_document_symbols,
 keymap.set('n', '<leader>fi', require('telescope.builtin').lsp_incoming_calls, {})
 keymap.set('n', '<leader>fm', function() require('telescope.builtin').treesitter({default_text=":method:"}) end)
 
+-- Advanced Git Search
+keymap.set('n', '<leader>as', ':AdvancedGitSearch<CR>', { noremap = true, silent = true })
+keymap.set('n', '<leader>al', ':AdvancedGitSearch search_log_content<CR>', { noremap = true, silent = true })
+keymap.set('n', '<leader>af', ':AdvancedGitSearch search_log_content_file<CR>', { noremap = true, silent = true })
+keymap.set('n', '<leader>ad', ':AdvancedGitSearch diff_commit_file<CR>', { noremap = true, silent = true })
+keymap.set('v', '<leader>ar', ':\'<,\'>AdvancedGitSearch diff_commit_line<CR>', { noremap = true, silent = true })
+keymap.set('n', '<leader>ab', ':AdvancedGitSearch diff_branch_file<CR>', { noremap = true, silent = true })
+keymap.set('n', '<leader>ac', ':AdvancedGitSearch changed_on_branch<CR>', { noremap = true, silent = true })
+
 -- Git-blame
 keymap.set("n", "<leader>gb", ":GitBlameToggle<CR>") -- toggle git blame
 
