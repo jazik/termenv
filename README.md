@@ -13,6 +13,7 @@ The configuration contains very basic setup with:
 - [`fzf`](https://github.com/junegunn/fzf) with [`fzf ohmyz plugin`](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fzf)
 - [`neovim`](https://neovim.io/) with couple of handy plugins inspired by
   [`bcampolo/nvim-starter-kit`](https://github.com/bcampolo/nvim-starter-kit)
+- [`nerd-fonts`](https://www.nerdfonts.com)
 
 Inspired also by:
 - [Terminal History Auto Suggestions As You Type With Oh My Zsh](https://www.dev-diaries.com/blog/terminal-history-auto-suggestions-as-you-type/)
@@ -60,6 +61,29 @@ Or to install only `tmux` run:
 ```
 ansible-playbook -i hosts termenv.yml --tags tmux
 ```
+
+# Fonts
+
+The `nerd-fonts` tag installs latest version of Fira Mono Nerd Fonts.
+
+If you are installing the playbook in a remote system, container or
+in a virtual machine, then note that the terminal will not display patched
+fonts unless you install the fonts in your local system.
+You can for example run just the `nerd-fonts` tag in your host system
+and rest of playbooks in the remote system.
+For how to configure your terminal to use the fonts see your terminal
+documentation.
+
+You can also use the playbook to install any other Nerd Font,
+just pass the name as an option:
+
+```
+ansible-playbook -i hosts termenv.yml --tags nerd-fonts -e "font_name=YourFontName"
+```
+
+The `YourFontName` should be the name of the Nerd Font zip file without .zip.
+You can find it by checking the download link from
+[Nerd Fonts Downloads](https://www.nerdfonts.com/font-downloads).
 
 # Sample screen shots
 

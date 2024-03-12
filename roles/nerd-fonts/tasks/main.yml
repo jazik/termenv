@@ -1,0 +1,32 @@
+- name: Define font download URL
+  set_fact:
+    font_url: "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/{{ font_name }}.zip"
+
+- name: Download the font archive
+  get_url:
+    url: "{{ font_url }}"
+    dest: "/tmp/{{ font_name }}.zip"
+  delegate_to: localhost
+
+- name: Ensure the font directory exists
+  file:
+    path: "{{ ansible_env.HOME }}/.local/share/fonts/{{ font_name }}"
+    state: directory
+  delegate_to: localhost
+
+- name: Extract the font archive
+  unarchive:
+    src: "/tmp/{{ font_name }}.zip"
+    dest: "{{ ansible_env.HOME }}/.local/share/fonts/{{ font_name }}"
+    remote_src: yes
+  delegate_to: localhost
+
+- name: Update font cache
+  command: fc-cache -fv
+  delegate_to: localhost
+
+- name: Remove the downloaded font archive
+  file:
+    path: "/tmp/{{ font_name }}.zip"
+    state: absent
+  delegate_to: localhost
