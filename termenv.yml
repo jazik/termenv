@@ -1,5 +1,7 @@
 - name: Set up local terminal environment
   hosts: local
+  vars:
+    font_name: "FiraMono"  # Default font name
   roles:
     - {role: zsh, tags: ['zsh']}
     - {role: oh-my-zsh, tags: ['oh-my-zsh']}
@@ -10,3 +12,4 @@
     - {role: tmux, tags: ['tmux']}
     - {role: fzf, tags: ['fzf']}
     - {role: neovim, tags: ['neovim']}
+    - {role: nerd-fonts, tags: ['nerd-fonts']}
