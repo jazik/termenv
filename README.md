@@ -69,8 +69,6 @@ The `nerd-fonts` tag installs latest version of Fira Mono Nerd Fonts.
 If you are installing the playbook in a remote system, container or
 in a virtual machine, then note that the terminal will not display patched
 fonts unless you install the fonts in your local system.
-You can for example run just the `nerd-fonts` tag in your host system
-and rest of playbooks in the remote system.
 For how to configure your terminal to use the fonts see your terminal
 documentation.
 
@@ -78,7 +76,7 @@ You can also use the playbook to install any other Nerd Font,
 just pass the name as an option:
 
 ```
-ansible-playbook -i hosts termenv.yml --tags nerd-fonts -e "font_name=YourFontName"
+ansible-playbook -i hosts nerdfonts.yml -e "font_name=YourFontName"
 ```
 
 The `YourFontName` should be the name of the Nerd Font zip file without .zip.
