@@ -45,7 +45,7 @@ Vagrant.configure("2") do |config|
   end
 
   if install_from_local == "yes"
-    config.vm.synced_folder ".", "/home/vagrant/termenv"
+    config.vm.synced_folder ".", "/home/vagrant/termenv", nfs_version: 4
   end
 
   if do_install == "yes"
