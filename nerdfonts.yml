@@ -1,0 +1,6 @@
+- name: Install Nerd Fonts
+  hosts: local
+  vars:
+    font_name: "FiraMono"  # Default font name
+  roles:
+    - {role: nerd-fonts, tags: ['nerd-fonts']}
