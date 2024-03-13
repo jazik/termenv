@@ -1,3 +1,7 @@
+- name: Install fontconfig
+  package: name=fontconfig state=latest
+  become: true
+
 - name: Define font download URL
   set_fact:
     font_url: "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/{{ font_name }}.zip"
