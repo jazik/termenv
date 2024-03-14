@@ -18,6 +18,31 @@ The configuration contains very basic setup with:
 Inspired also by:
 - [Terminal History Auto Suggestions As You Type With Oh My Zsh](https://www.dev-diaries.com/blog/terminal-history-auto-suggestions-as-you-type/)
 
+
+# Cheat Sheet
+
+This is very basic cheat sheet to get you started. For all mappings see the
+configuration files.
+
+| Key | Command | Key | Command |
+|-----|---------|-----|---------|
+| `<C-h>`| Jump to left window | `<Space>` | `<leader>` |
+| `<C-l>`| Jump to right window | `<leader>wq` | Save and quit |
+| `<C-j>`| Jump down | `<leader>qq` | Quite without saving |
+| `<C-k>`| Jump up | `<leader>ww` | Save |
+| `<leader>sv` | Split window vertically | `<leader>ee` | Toggle file explorer |
+| `<leader>sh` | Split window horizontally | `<leader>ff` | Find file |
+| `<leader>sx` | Close split window | `<leader>fg` | Life grep |
+| `:Git` | Git with Fugitive |
+| `<leader>al` | Git log | `<leader>ar` | Git log for selection |
+| `<leader>af` | Git log for file | `<leader>gb` | Git blame (inline) |
+| `<leader>ha` | Add file to quick list | `<leader>hh` | Show file quick list |
+| `<leader>h<1-9]` | Jump to file from quick list |
+| `<leader>gg` | Show definition | `<leader>gD`| Jump to declaration |
+| `<leader>gd`| Jump to definition | `<leader>gi`| Jump to implementation |
+| `<C-Space>`| Completition |
+
+
 # Prerequisites
 
 The ansible script performs package installations. The user under which
