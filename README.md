@@ -41,6 +41,8 @@ configuration files.
 | `<leader>gg` | Show definition | `<leader>gD`| Jump to declaration |
 | `<leader>gd`| Jump to definition | `<leader>gi`| Jump to implementation |
 | `<C-Space>`| Completition |
+| `:Copilot setup`| Configure Copilot | `:Copilot enable` | Enable Copilot |
+| `:CopilotChat` | Open Copilot chat window |
 
 
 # Prerequisites
