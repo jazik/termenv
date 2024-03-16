@@ -33,7 +33,7 @@ configuration files.
 | `<leader>sv` | Split window vertically | `<leader>ee` | Toggle file explorer |
 | `<leader>sh` | Split window horizontally | `<leader>ff` | Find file |
 | `<leader>sx` | Close split window | `<leader>fg` | Life grep |
-| `:Git` | Git with Fugitive |
+| `:Git` | Git with Fugitive | `:Neogit` | Git with Neogit |
 | `<leader>al` | Git log | `<leader>ar` | Git log for selection |
 | `<leader>af` | Git log for file | `<leader>gb` | Git blame (inline) |
 | `<leader>ha` | Add file to quick list | `<leader>hh` | Show file quick list |
