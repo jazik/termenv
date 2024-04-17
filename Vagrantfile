@@ -27,6 +27,7 @@ Vagrant.configure("2") do |config|
     fedora.vm.provider "libvirt"
     if do_install == "yes"
       fedora.vm.provision "shell", inline: <<-SHELL
+        sudo dnf -y update
         sudo dnf -y install git ansible
       SHELL
     end
