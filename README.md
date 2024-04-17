@@ -110,6 +110,18 @@ The `YourFontName` should be the name of the Nerd Font zip file without .zip.
 You can find it by checking the download link from
 [Nerd Fonts Downloads](https://www.nerdfonts.com/font-downloads).
 
+# Neovim Copilot plugins
+
+The Copilot and CopilotChat neovim plugins can be installed separately.
+This is to avoid spurious errors from the plugins when Copilot is not
+configured and used.
+
+To install the plugins run:
+
+```
+ansible-playbook -i hosts neovim-copilot.yml
+```
+
 # Sample screen shots
 
 ![Zsh command line](../media/termenv.png?raw=true)
