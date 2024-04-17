@@ -4,6 +4,7 @@ FROM $DISTRO
 ARG DISTRO
 RUN if [ "$DISTRO" = "fedora" ]; then \
         CMD=dnf; \
+        dnf -y update \
     else \
         export DEBIAN_FRONTEND=noninteractive; \
         export TZ=Etc/UTC; \
