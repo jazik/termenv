@@ -1,0 +1,4 @@
+- name: Install Copilot and CopilotChat neovim plugins
+  hosts: local
+  roles:
+    - {role: neovim-copilot, tags: ['neovim-copilot']}

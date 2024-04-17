@@ -1,0 +1,20 @@
+- name: Check if neovim is installed
+  ansible.builtin.command:
+    cmd: "which nvim"
+  register: executable_check
+  changed_when: false
+  failed_when: executable_check.rc != 0
+
+# Needed by copilot
+- name: Install nodejs
+  package: name=nodejs state=latest
+  become: true
+
+- name: Check if nvim copilot plugin is already installed
+  stat:
+    path: ~/.config/nvim/plugins/copilot.lua
+  register: nvim_copilot_config_exists
+
+- name: Copy nvim copilot configuration
+  copy: src=nvim dest={{ lookup('env', 'HOME') }}/.config/.
+  when: not nvim_copilot_config_exists.stat.exists
