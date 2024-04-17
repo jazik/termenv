@@ -162,7 +162,8 @@ In order to run local tests install `vagrant` with both `libvirt` and
 `VirtualBox` providers. Check your host system distro guidelines how
 to install those.
 
-In `fedora` you can run:
+In `fedora` you can run following. Note that in order to install `VirtualBox` you
+will have to enable [RPMFusion](https://rpmfusion.org/Configuration/).
 
 ```
 sudo dnf install vagrant vagrant-libvirt VirtualBox libvirt
