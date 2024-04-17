@@ -19,7 +19,7 @@ Inspired also by:
 - [Terminal History Auto Suggestions As You Type With Oh My Zsh](https://www.dev-diaries.com/blog/terminal-history-auto-suggestions-as-you-type/)
 
 
-# Cheat Sheet
+# Neovim Cheat Sheet
 
 This is very basic cheat sheet to get you started. For all mappings see the
 configuration files.
