@@ -10,6 +10,7 @@ return {
     'theHamsta/nvim-dap-virtual-text', -- inline variable text while debugging
     -- https://github.com/nvim-telescope/telescope-dap.nvim
     'nvim-telescope/telescope-dap.nvim', -- telescope integration with dap
+    'nvim-neotest/nvim-nio',
   },
   opts = {
     controls = {
