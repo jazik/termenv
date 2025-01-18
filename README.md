@@ -43,6 +43,7 @@ configuration files.
 | `<C-Space>`| Completition |
 | `:Copilot setup`| Configure Copilot | `:Copilot enable` | Enable Copilot |
 | `:CopilotChat` | Open Copilot chat window |
+| `<C-J>` | Accept Copilot suggestion |
 
 
 # Prerequisites
