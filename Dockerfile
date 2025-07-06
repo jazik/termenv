@@ -1,5 +1,5 @@
 ARG DISTRO
-FROM $DISTRO
+FROM ${DISTRO:-fedora}
 
 ARG DISTRO
 RUN if [ "$DISTRO" = "fedora" ]; then \
