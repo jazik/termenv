@@ -16,7 +16,7 @@ RUN if [ "$DISTRO" = "fedora" ]; then \
     $CMD -y install ansible git sudo
 
 ARG USERNAME=fedora
-ARG USER_UID=1000
+ARG USER_UID=2000
 ARG USER_GID=$USER_UID
 
 RUN groupadd --gid $USER_GID $USERNAME \
