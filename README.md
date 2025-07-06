@@ -14,6 +14,7 @@ The configuration contains very basic setup with:
 - [`neovim`](https://neovim.io/) with couple of handy plugins inspired by
   [`bcampolo/nvim-starter-kit`](https://github.com/bcampolo/nvim-starter-kit)
 - [`nerd-fonts`](https://www.nerdfonts.com)
+- [`cspell`](https://github.com/davidmh/cspell.nvim/tree/main)
 
 Inspired also by:
 - [Terminal History Auto Suggestions As You Type With Oh My Zsh](https://www.dev-diaries.com/blog/terminal-history-auto-suggestions-as-you-type/)

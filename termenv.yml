@@ -10,3 +10,4 @@
     - {role: tmux, tags: ['tmux']}
     - {role: fzf, tags: ['fzf']}
     - {role: neovim, tags: ['neovim']}
+    - {role: cspell, tags: ['cspell']}
