@@ -1,0 +1,33 @@
+- name: Ensure Node.js and npm are installed
+  package:
+    name: nodejs
+    state: present
+  become: true
+
+- name: Install npm (optional if already included with nodejs)
+  package:
+    name: npm
+    state: present
+  become: true
+
+- name: Install cspell globally
+  community.general.npm:
+    name: cspell
+    global: true
+    state: latest
+  become: true
+
+- name: Copy nvim cspell configuration
+  copy: src=nvim dest={{ lookup('env', 'HOME') }}/.config/.
+
+- name: Ensure CSpell keymaps are present in Neovim keymaps.lua
+  ansible.builtin.blockinfile:
+    path: "{{ ansible_user_dir }}/.config/nvim/lua/core/keymaps.lua"
+    marker: "-- {mark} ANSIBLE MANAGED CSpell keymaps"
+    insertafter: EOF
+    prepend_newline: true
+    block: |
+      -- CSpell
+      keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "code action" })
+      keymap.set("n", "<leader>cn", vim.diagnostic.goto_next, { desc = "next diagnostic" })
+      keymap.set("n", "<leader>cp", vim.diagnostic.goto_next, { desc = "previous diagnostic" })
