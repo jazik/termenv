@@ -31,7 +31,7 @@ WORKDIR /home/$USERNAME
 ENV TERM=xterm-256color
 ENV SHELL=/usr/bin/zsh
 
-RUN git clone https://github.com/jazik/termenv.git && \
+RUN --mount=type=bind,source=.,target=/home/termenv/termenv \
     cd termenv && \
     ansible-playbook -i hosts termenv.yml
 
