@@ -40,7 +40,7 @@ configuration files.
 | `<leader>h<1-9]` | Jump to file from quick list |
 | `<leader>gg` | Show definition | `<leader>gD`| Jump to declaration |
 | `<leader>gd`| Jump to definition | `<leader>gi`| Jump to implementation |
-| `<C-Space>`| Completition |
+| `<C-Space>`| Completition | `<leader>fw` | Grep word under cursor |
 | `:Copilot setup`| Configure Copilot | `:Copilot enable` | Enable Copilot |
 | `:CopilotChat` | Open Copilot chat window |
 | `<C-J>` | Accept Copilot suggestion |
