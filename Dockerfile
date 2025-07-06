@@ -15,7 +15,7 @@ RUN if [ "$DISTRO" = "fedora" ]; then \
     fi && \
     $CMD -y install ansible git sudo
 
-ARG USERNAME=fedora
+ARG USERNAME=termenv
 ARG USER_UID=2000
 ARG USER_GID=$USER_UID
 
