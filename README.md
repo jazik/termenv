@@ -156,7 +156,12 @@ Then run the container:
 docker run --rm -it termenv
 ````
 
-The playbooks are mounted from current directory.
+The playbooks are mounted from current directory. If you want to mount the
+plaoybooks when running the container, you can use `-v` option:
+
+```
+docker run --rm -it -v .:/home/termenv/termenv:Z termenv
+```
 
 ## With Vagrant
 
