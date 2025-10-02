@@ -40,24 +40,32 @@ return {
       }
     })
 
-    local lspconfig = require('lspconfig')
     local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
     local lsp_attach = function(client, bufnr)
       -- Create your keybindings here...
     end
 
-    -- Lua LSP settings
-    lspconfig.lua_ls.setup {
+    -- (1) Global defaults for all LSPs
+    vim.lsp.config('*', {
+      capabilities = lsp_capabilities,
+      on_attach = lsp_attach,
+    })
+
+    -- (2) Per-server adjustments
+    vim.lsp.config('lua_ls', {
       settings = {
         Lua = {
-          diagnostics = {
-            -- Get the language server to recognize the `vim` global
-            globals = {'vim'},
-          },
+          diagnostics = { globals = { 'vim' } },
+          workspace = { checkThirdParty = false },
         },
       },
-    }
+    })
+    -- Add more if needed:
+    -- vim.lsp.config('marksman', { ... })
+    -- vim.lsp.config('quick_lint_js', { ... })
 
+    -- (3) Enable the servers you want active
+    vim.lsp.enable({ 'lua_ls', 'marksman', 'quick_lint_js' })
   end
 }
 
