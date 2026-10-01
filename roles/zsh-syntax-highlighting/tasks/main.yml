@@ -1,6 +1,3 @@
-- name: Cloning zsh-syntax-highlighting
-  git: repo=https://github.com/zsh-users/zsh-syntax-highlighting.git dest=~/.oh-my-zsh/plugins/zsh-syntax-highlighting
-
 - name: Check if .oh-my-zsh exists
   stat:
     path: ~/.oh-my-zsh
